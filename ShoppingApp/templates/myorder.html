@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+
+{% block main %}
+<table cellspacing='10' cellpadding='10' border="2">
+    <tr>
+
+        <th>  TotalBill </th>
+        <th>  OrderDate </th>
+        <th>  Status </th>
+        <th>  UserName </th>
+
+
+    </tr>
+    {% for i in orderlist %}
+    <tr>
+
+        <td> {{ i.totalBill }} </td>
+        <td> {{ i.orderDate }} </td>
+        <td> {{ i.status }} </td>
+        <td> {{ i.user.username }} </td> 
+
+
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+<h1> <br><br><br> </h1>
+
+{% endblock %}
+
+
+

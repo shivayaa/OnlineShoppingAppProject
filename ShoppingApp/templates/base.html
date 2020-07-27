@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bmin.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/myapp.css' %}" rel="stylesheet">  
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    {% include 'navBar.html' %}
+
+    <!-- Page Content -->
+    <div class="container">
+       
+        <div class="row">
+             <!-- SideBar -->
+
+          {% include 'sideBar.html' %}
+
+            </div>
+            <!-- /.col-lg-3 -->
+
+            <div class="col-lg-9">
+                <!-- slider -->
+                {% include 'slider.html' %}
+
+                <div class="row">
+
+             {% block main %}  {% endblock %}  
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+  {% include 'footer.html' %} 
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'js/jq.js' %}"></script>
+    <script src="{% static 'js/bjq.js' %}"></script>
+
+</body>
+
+</html>
